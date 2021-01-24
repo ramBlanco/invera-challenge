@@ -33,3 +33,47 @@ El usuario de la aplicación tiene que ser capaz de:
 - El Readme debe contener todas las instrucciones para poder levantar la aplicación, en caso de ser necesario, y explicar cómo se usa.
 - Disponibilidad para realizar una pequeña demo del proyecto al finalizar el challenge.
 - Tiempo para la entrega: Aproximadamente 7 días.
+
+## Solución:
+
+### Requerimientos:
+
+- Tener docker y docker-compose instalado ([Descargar](https://docs.docker.com/get-docker/))
+- Tener Postman para realizar las pruebas a los endpoints ([Descargar](https://www.postman.com/downloads/))
+
+## Test
+
+```comand
+git clone [url del repositorio]
+```
+
+```comand
+cd [carpeta del repositorio]
+```
+
+```comand
+docker-compose build && docker-compose up
+```
+
+En la consola/terminal deberiamos tener algo así:
+
+```
+Successfully built a6f73d87bae9
+Successfully tagged todo-challenge_web:latest
+Found orphan containers (todo-challenge_db_1) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up.
+Recreating todo-challenge_web_1 ... done
+Attaching to todo-challenge_web_1
+web_1  | Watching for file changes with StatReloader
+web_1  | Performing system checks...
+web_1  |
+web_1  | System check identified no issues (0 silenced).
+web_1  | January 24, 2021 - 20:05:52
+web_1  | Django version 3.1.5, using settings 'challenge.settings'
+web_1  | Starting development server at http://0.0.0.0:8000/
+web_1  | Quit the server with CONTROL-C.
+Stopping todo-challenge_web_1   ... done
+Gracefully stopping... (press Ctrl+C again to force)
+```
+
+- Ahora vamos a Postman e importamos el archivo llamado "Challenge Invera.postman_collection.json"
+- En Postman tendremos los diversos endpoint que estan disposibles en el servidor
